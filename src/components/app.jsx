@@ -12,7 +12,6 @@ class App extends Component {
       selectedGifId: 'xUPGGDNsLvqsBOhuU0',
       gifList: []
     };
-    // this.selectGif('14nFVfaGCfFfqg');
   }
 
   search = (query) => {
@@ -24,13 +23,13 @@ class App extends Component {
         gifList: res.data
       });
     });
-  };
+  }
 
-  // selectGif = (gif) => {
-  //   this.setState({
-  //     selectedGifId: gif,
-  //   });
-  // };
+  selectGif = (gif) => {
+    this.setState({
+      selectedGifId: gif,
+    });
+  }
 
   render() {
     // const ids = [
@@ -47,7 +46,7 @@ class App extends Component {
           </div>
         </div>
         <div className="right-scene">
-          <GifList ids={this.state.gifList} />
+          <GifList ids={this.state.gifList} selectGif={this.selectGif} />
         </div>
       </div>
     )
