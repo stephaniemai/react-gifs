@@ -12,6 +12,7 @@ class App extends Component {
       selectedGifId: 'xUPGGDNsLvqsBOhuU0',
       gifList: []
     };
+    // this.selectGif('14nFVfaGCfFfqg');
   }
 
   search = (query) => {
@@ -24,6 +25,12 @@ class App extends Component {
       });
     });
   };
+
+  // selectGif = (gif) => {
+  //   this.setState({
+  //     selectedGifId: gif,
+  //   });
+  // };
 
   render() {
     // const ids = [
